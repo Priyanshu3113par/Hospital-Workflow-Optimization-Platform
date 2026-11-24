@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-slate-200;
+  }
+  body {
+    @apply bg-slate-50 text-slate-800 font-sans antialiased;
+    min-height: 100vh;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-100;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded-full hover:bg-slate-400;
+  }
+}
+
+@layer components {
+  .hospital-card {
+    @apply bg-white border border-slate-200/80 rounded-xl shadow-card transition-all duration-200;
+  }
+  .hospital-card-hover {
+    @apply hospital-card hover:shadow-card-hover hover:border-slate-300;
+  }
+  .btn-primary {
+    @apply bg-primary-700 hover:bg-primary-800 active:bg-primary-900 text-white font-medium px-4 py-2 rounded-lg
+           transition-all duration-150 flex items-center justify-center gap-2 shadow-sm disabled:opacity-50 disabled:cursor-not-allowed text-sm;
+  }
+  .btn-secondary {
+    @apply bg-white hover:bg-slate-50 active:bg-slate-100 text-slate-700 font-medium px-4 py-2 rounded-lg
+           transition-all duration-150 flex items-center justify-center gap-2 border border-slate-300 shadow-sm text-sm;
+  }
+  .btn-danger {
+    @apply bg-rose-600 hover:bg-rose-700 active:bg-rose-800 text-white font-medium px-3 py-1.5 rounded-lg
+           transition-all duration-150 flex items-center justify-center gap-1.5 shadow-sm text-xs;
+  }
+  .btn-outline-primary {
+    @apply bg-primary-50/50 hover:bg-primary-100/70 text-primary-800 font-medium px-3 py-1.5 rounded-lg
+           transition-all duration-150 flex items-center justify-center gap-1.5 border border-primary-200 text-xs;
+  }
+  .input-field {
+    @apply bg-white border border-slate-300 rounded-lg px-3 py-2 text-slate-800 text-sm
+           placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500/20
+           focus:border-primary-600 transition-all duration-150 w-full;
+  }
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+  .badge-success {
+    @apply badge bg-emerald-50 text-emerald-700 border border-emerald-200/60;
+  }
+  .badge-warning {
+    @apply badge bg-amber-50 text-amber-700 border border-amber-200/60;
+  }
+  .badge-danger {
+    @apply badge bg-rose-50 text-rose-700 border border-rose-200/60;
+  }
+  .badge-teal {
+    @apply badge bg-teal-50 text-teal-700 border border-teal-200/60;
+  }
+  .badge-neutral {
+    @apply badge bg-slate-100 text-slate-700 border border-slate-200;
+  }
+  .badge-purple {
+    @apply badge bg-purple-50 text-purple-700 border border-purple-200/60;
+  }
+  .badge-blue {
+    @apply badge bg-sky-50 text-sky-700 border border-sky-200/60;
+  }
+}
